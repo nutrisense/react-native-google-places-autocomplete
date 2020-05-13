@@ -293,7 +293,7 @@ export default class GooglePlacesAutocomplete extends Component {
         request.setRequestHeader('Referer', this.props.referer)
       }
 
-      console.log('RNPlaces: ', request)
+      // console.log('RNPlaces: ', request)
       request.send();
     } else if (rowData.isCurrentLocation === true) {
       // display loader
@@ -448,7 +448,7 @@ export default class GooglePlacesAutocomplete extends Component {
          request.setRequestHeader('Referer', this.props.referer)
       }
 
-      console.log('RNPlaces: ', request)
+      // console.log('RNPlaces: ', request)
       request.send();
     } else {
       this._results = [];
@@ -472,7 +472,7 @@ export default class GooglePlacesAutocomplete extends Component {
 
         if (request.status === 200) {
           const responseJSON = JSON.parse(request.responseText);
-          console.log('response: ', responseJSON)
+          // console.log('response: ', responseJSON)
           if (this.props.placesAPI === 'GoogleReverseGeocoding') {
             if (typeof responseJSON.results !== 'undefined') {
               const results = responseJSON.results
@@ -525,7 +525,7 @@ export default class GooglePlacesAutocomplete extends Component {
          request.setRequestHeader('Referer', this.props.referer)
       }
 
-      console.log('RNPlaces: ', request)
+      // console.log('RNPlaces: ', request)
       request.send();
     } else {
       this._results = [];
@@ -606,7 +606,7 @@ export default class GooglePlacesAutocomplete extends Component {
   }
 
   _renderRow = (rowData = {}, sectionID, rowID) => {
-    console.log({rowData})
+    // console.log({rowData})
     return (
       <ScrollView
         style={{ flex: 1 }}
@@ -703,7 +703,7 @@ export default class GooglePlacesAutocomplete extends Component {
     );
 
     if ((this.state.text !== '' || this.props.predefinedPlaces.length || this.props.currentLocation === true) && this.state.listViewDisplayed === true) {
-      console.log({data: this.state.dataSource})
+      // console.log({data: this.state.dataSource})
       return (
         <FlatList
           scrollEnabled={!this.props.disableScroll}
