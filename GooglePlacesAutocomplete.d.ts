@@ -338,6 +338,7 @@ interface GooglePlacesAutocompleteProps extends TextInputProps {
   currentLocationLabel?: string;
 
   // Which API to use: GoogleReverseGeocoding or GooglePlacesSearch
+  placesAPI?:       'GoogleReverseGeocoding' | 'GooglePlacesSearch';
   nearbyPlacesAPI?: 'GoogleReverseGeocoding' | 'GooglePlacesSearch';
 
   // available options for GoogleReverseGeocoding API : https://developers.google.com/maps/documentation/geocoding/intro
